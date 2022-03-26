@@ -126,6 +126,7 @@ echo.
 echo JFYI: This host has %NUMBER_OF_PROCESSORS% CPU threads, so projected Monero hashrate is around %EXP_MONERO_HASHRATE% KH/s.
 echo.
 
+pause
 
 rem start doing stuff: preparing miner
 
@@ -340,6 +341,7 @@ goto OK
 :OK
 echo
 echo [*] Setup complete
+pause
 exit /b 0
 
 :strlen string len
@@ -350,4 +352,4 @@ for /L %%A in (12,-1,0) do (
   for %%B in (!len!) do if "!token:~%%B,1!"=="" set/A "len&=~1<<%%A"
 )
 endlocal & set %~2=%len%
-exit 
+exit
